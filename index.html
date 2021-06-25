@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <script>
+            function SubForm (){
+                $.ajax({
+                    url:'https://api.apispreadsheets.com/data/410/',
+                    type:'post',
+                    data:$("#myForm").serializeArray(),
+                    success: function(){
+                    alert("Form Data Submitted :)")
+                    },
+                    error: function(){
+                    alert("There was an error :(")
+                    }
+                });
+        }
+        </script>
+        <script>
+            function SubForm (){
+                $.ajax({
+                    url:"https://api.apispreadsheets.com/data/14625/",
+                    type:"post",
+                    data:$("#myForm").serializeArray(),
+                    success: function(){
+                        alert("Succesvol verstuurd.")
+                    },
+                    error: function(){
+                        alert("Er is een fout opgetreden. Neem contact op met de systeembeheerder.")
+                    }
+                });
+            }
+        </script>
+        <link rel="stylesheet" href="style.css">
+        <title>Suggesties Invoer</title>
+    </head>
+    <body>
+        <div>
+            <h1>Suggesties Programma Najaar 2021</h1>
+            <p>Explorers</p>
+            <form id="myForm">
+                <label>Naam</label>
+                <br/>
+                <input type=text name="naam" placeholder="Voer hier uw naam in" value=""/>
+                <br/>
+                <label>Suggestie</label>
+                <br/>
+                <input type=text name="suggestie" placeholder="Voer hier uw suggestie in" value=""/>
+                <br/>
+                <!-- <label>Age</label>
+                <br/>
+                <input type="radio" id="age" name="age" value="18-35" /> 18-35<br/>
+                <input type="radio" id="age" name="age" value="35+" /> 35+<br/>
+                <br/> -->
+                <!-- <label>Message</label>
+                <br/>
+                <textarea name="message">
+                </textarea>
+                <br/>
+                <br/> -->
+                <input type="hidden" id="goedgekeurd" name="goedgekeurd" value="false">
+            </form>
+            <button onclick="SubForm()">Versturen</button>
+        </div>
+    </body>
+</html>
