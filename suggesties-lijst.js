@@ -1,5 +1,5 @@
 let SHEET_ID = '2PACX-1vTzWExNS8fFPsqH1DWS95q6e4hrjfkx2cYkodu0GJNr9ydo4xR-6Sk9GaIzfRXbWgjwyHmUDQVptJlE';
-let API_KEY = secrets.GOOGLE_API_KEY;
+let API_KEY = process.env.GOOGLE_API_KEY;
 
 function fetchSheet({ spreadsheetId, sheetName, apiKey, complete }) {
     let url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}?key=${apiKey}`;
