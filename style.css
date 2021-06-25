@@ -1,6 +1,10 @@
 html {
     background: linear-gradient(0deg, rgba(20, 20, 20, 0.5), rgba(20, 20, 20, 0.5)), url("https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #141d00;
+    width: 100%;
+    height: 100%;
 }
 
 input[type=text], select {
